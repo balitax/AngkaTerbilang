@@ -1,0 +1,26 @@
+name: Swift
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        swift: [5.7, 5.8, 5.9]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Swift ${{ matrix.swift }}
+        uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: ${{ matrix.swift }}
+      - name: Build and Test
+        run: swift test --enable-code-coverage
+      - name: Upload coverage to Codecov
+        if: matrix.swift == '5.7' # upload sekali saja
+        run: |
+          bash <(curl -s https://codecov.io/bash) -c -F swift 
