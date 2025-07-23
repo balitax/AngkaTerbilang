@@ -1,3 +1,9 @@
+[![Build Status](https://github.com/balitax/AngkaTerbilang/actions/workflows/swift.yml/badge.svg)](https://github.com/balitax/AngkaTerbilang/actions)
+[![Swift](https://img.shields.io/badge/swift-5.7-orange.svg)](https://swift.org)
+[![SPM compatible](https://img.shields.io/badge/SPM-compatible-brightgreen.svg?style=flat)](https://swift.org/package-manager/)
+[![Codecov](https://codecov.io/gh/balitax/AngkaTerbilang/branch/main/graph/badge.svg)](https://codecov.io/gh/balitax/AngkaTerbilang)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # AngkaTerbilang
 
 Konversi angka ke teks terbilang Bahasa Indonesia, lengkap dengan dukungan satuan mata uang dan format desimal. Cocok untuk aplikasi keuangan, laporan, dan kebutuhan lain yang memerlukan angka dalam bentuk kata.
