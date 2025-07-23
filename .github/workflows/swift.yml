@@ -23,4 +23,9 @@ jobs:
       - name: Upload coverage to Codecov
         if: matrix.swift == '5.7' # upload sekali saja
         run: |
-          bash <(curl -s https://codecov.io/bash) -c -F swift 
+          bash <(curl -s https://codecov.io/bash) -c -F swift
+      - name: Upload coverage reports to Codecov
+        if: matrix.swift == '5.7'
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} 
